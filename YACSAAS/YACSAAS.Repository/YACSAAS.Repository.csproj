@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24FE9C83-858C-46EF-B161-ECBC0DBCE821}</ProjectGuid>
+    <ProjectGuid>{ECB64A1C-75BE-4DFF-A3E9-EDC7A5CA3094}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YACSAAS.Infrastructure</RootNamespace>
-    <AssemblyName>YACSAAS.Infrastructure</AssemblyName>
+    <RootNamespace>YACSAAS.Repository</RootNamespace>
+    <AssemblyName>YACSAAS.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,22 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caching\ICacheStorage.cs" />
-    <Compile Include="Caching\SystemRuntimeCacheStorage.cs" />
-    <Compile Include="Configuration\AppSettingsConfigurationRepository.cs" />
-    <Compile Include="Configuration\IConfigurationRepository.cs" />
-    <Compile Include="Domain\BusinessRule.cs" />
-    <Compile Include="Domain\Entity.cs" />
-    <Compile Include="Domain\EntityBase.cs" />
-    <Compile Include="Domain\IAggregateRoot.cs" />
-    <Compile Include="Domain\IReadOnlyRepository.cs" />
-    <Compile Include="Domain\IRepository.cs" />
-    <Compile Include="Domain\ValueObjectBase.cs" />
-    <Compile Include="Domain\ValueObjectIsInvalidException.cs" />
+    <Compile Include="Database\Customer.cs" />
+    <Compile Include="Database\Fleet.cs" />
+    <Compile Include="Database\Order.cs" />
+    <Compile Include="Database\OrderLine.cs" />
+    <Compile Include="Database\VehicleType.cs" />
+    <Compile Include="Database\Manufacturer.cs" />
+    <Compile Include="Database\User.cs" />
+    <Compile Include="Database\Vehicle.cs" />
+    <Compile Include="Database\YACSAASDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWorkRepository.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\UnitOfWork.cs" />
+    <Compile Include="Repositories\VehicleRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YACSAAS.Infrastructure\YACSAAS.Infrastructure.csproj">
+      <Project>{24FE9C83-858C-46EF-B161-ECBC0DBCE821}</Project>
+      <Name>YACSAAS.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

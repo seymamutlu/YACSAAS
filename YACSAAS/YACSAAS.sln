@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACSAAS.Infrastructure", "YACSAAS.Infrastructure\YACSAAS.Infrastructure.csproj", "{24FE9C83-858C-46EF-B161-ECBC0DBCE821}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACSAAS.Repository", "YACSAAS.Repository\YACSAAS.Repository.csproj", "{ECB64A1C-75BE-4DFF-A3E9-EDC7A5CA3094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACSAAS.Web", "YACSAAS.Web\YACSAAS.Web.csproj", "{840E3418-7F99-41BF-A6D2-A7A3901D9D96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACSAAS.Web.Tests", "YACSAAS.Web.Tests\YACSAAS.Web.Tests.csproj", "{9EA03837-8CA3-42A3-8B0B-6CD0CCC582C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACSAAS.Domain", "YACSAAS.Domain\YACSAAS.Domain.csproj", "{19CA2500-2247-45F3-85F3-1A001CB10865}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{24FE9C83-858C-46EF-B161-ECBC0DBCE821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24FE9C83-858C-46EF-B161-ECBC0DBCE821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24FE9C83-858C-46EF-B161-ECBC0DBCE821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB64A1C-75BE-4DFF-A3E9-EDC7A5CA3094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB64A1C-75BE-4DFF-A3E9-EDC7A5CA3094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB64A1C-75BE-4DFF-A3E9-EDC7A5CA3094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB64A1C-75BE-4DFF-A3E9-EDC7A5CA3094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840E3418-7F99-41BF-A6D2-A7A3901D9D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840E3418-7F99-41BF-A6D2-A7A3901D9D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840E3418-7F99-41BF-A6D2-A7A3901D9D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840E3418-7F99-41BF-A6D2-A7A3901D9D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA03837-8CA3-42A3-8B0B-6CD0CCC582C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA03837-8CA3-42A3-8B0B-6CD0CCC582C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA03837-8CA3-42A3-8B0B-6CD0CCC582C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA03837-8CA3-42A3-8B0B-6CD0CCC582C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19CA2500-2247-45F3-85F3-1A001CB10865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19CA2500-2247-45F3-85F3-1A001CB10865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19CA2500-2247-45F3-85F3-1A001CB10865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19CA2500-2247-45F3-85F3-1A001CB10865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

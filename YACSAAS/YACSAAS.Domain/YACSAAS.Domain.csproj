@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24FE9C83-858C-46EF-B161-ECBC0DBCE821}</ProjectGuid>
+    <ProjectGuid>{19CA2500-2247-45F3-85F3-1A001CB10865}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YACSAAS.Infrastructure</RootNamespace>
-    <AssemblyName>YACSAAS.Infrastructure</AssemblyName>
+    <RootNamespace>YACSAAS.Domain</RootNamespace>
+    <AssemblyName>YACSAAS.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,9 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,21 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Caching\ICacheStorage.cs" />
-    <Compile Include="Caching\SystemRuntimeCacheStorage.cs" />
-    <Compile Include="Configuration\AppSettingsConfigurationRepository.cs" />
-    <Compile Include="Configuration\IConfigurationRepository.cs" />
-    <Compile Include="Domain\BusinessRule.cs" />
-    <Compile Include="Domain\Entity.cs" />
-    <Compile Include="Domain\EntityBase.cs" />
-    <Compile Include="Domain\IAggregateRoot.cs" />
-    <Compile Include="Domain\IReadOnlyRepository.cs" />
-    <Compile Include="Domain\IRepository.cs" />
-    <Compile Include="Domain\ValueObjectBase.cs" />
-    <Compile Include="Domain\ValueObjectIsInvalidException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWorkRepository.cs" />
+    <Compile Include="ValueObjects\Manufacturer.cs" />
+    <Compile Include="ValueObjects\ValueObjectBusinessRule.cs" />
+    <Compile Include="ValueObjects\VehicleType.cs" />
+    <Compile Include="Vehicle\Vehicle.cs" />
+    <Compile Include="Vehicle\VehicleBusinessRule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YACSAAS.Infrastructure\YACSAAS.Infrastructure.csproj">
+      <Project>{24FE9C83-858C-46EF-B161-ECBC0DBCE821}</Project>
+      <Name>YACSAAS.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
