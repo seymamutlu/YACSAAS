@@ -8,10 +8,6 @@ namespace YACSAAS.Web.Module
     {
         protected override void Load(ContainerBuilder builder)
         {
-            //builder.RegisterAssemblyTypes(Assembly.Load("YACSAAS.Service"))
-            //    .Where(t => t.Name.EndsWith("Service"))
-            //    .AsImplementedInterfaces()
-            //    .InstancePerLifetimeScope();
         }
     }
 }
